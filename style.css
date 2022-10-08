@@ -1,193 +1,294 @@
+/* Defining the colors, fonts, font sizes, and font weights for the website. */
 :root{
 
- /* Defining the colors for the website. */
-  --clr-primary: #000000;
-  --clr-primary-100: #ffffff;
-
-  --clr-secoundary: #00543f;
-  --clr-secoundary-100: #505050;
-
-/* Defining the font for the website. */
-  --ff-primary: 'Open Sans', sans-serif;
-  --ff-secoundary: 'Roboto', sans-serif;
-
-  --ff-body:var(--ff-primary);
-  --ff-heading:var(--ff-secoundary);
-
+  /* Defining the colors for the website. */
+   --clr-primary: #000000;
+   --clr-primary-100: #ffffff;
+ 
+   --clr-secoundary: #00543f;
+   --clr-secoundary-100: #505050;
+ 
+ /* Defining the font for the website. */
+   --ff-primary: 'Open Sans', sans-serif;
+   --ff-secoundary: 'Roboto', sans-serif;
+ 
+   --ff-body:var(--ff-primary);
+   --ff-heading:var(--ff-secoundary);
+ 
+  /* Defining the font size for the website. */
+   --fs-xxlarger: 3rem; /* 48px*/
+   --fs-xlarger: 2rem; /* 32px*/
+   --fs-larger: 1.5rem; /* 24px*/
+   --fs-large: 1.25rem; /* 20px*/
+   --fs-regular: 1.125rem; /* 18px*/
+   --fs-medium: 1rem; /* 16px*/
+   --fs-small: 0.875rem; /* 14px*/
+   --fs-smaller: 0.75rem;  /* 12px*/
+ 
+   --fs-primary-heading:var(--fs-xxlarger);
+   --fs-secoundary-headig:var(--fs-xlarger);
+   --fs-nav:var(--fs-medium);
+   --fs-body:var(--fs-medium);
+   --fs-button:var(--fs-medium);
+ 
+ /* Defining the font weight for the website. */
+   --fw-regular: 400;
+   --fw-bold: 700;
+ 
+ 
+ }
+ 
+ /* Box sizing rules */
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ /* Remove default margin */
+ *{
+   margin: 0;
+   padding: 0;
+   font: inherit;
+ }
+ 
+ /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ ul[role='list'],
+ ol[role='list'] {
+   list-style: none;
+ }
+ 
+ /* Set core root defaults */
+ html:focus-within {
+   scroll-behavior: smooth;
+ }
+ 
+ /* Making the height of the body and html 100% of the viewport. */
+ html,
+ body{
+   height: 100%;
+ }
+ 
+ /* Set core body defaults */
+ body {
+   text-rendering: optimizeSpeed;
+   line-height: 1.5;
+ }
+ 
+ /* A elements that don't have a class get default styles */
+ a:not([class]) {
+   text-decoration: auto;
+   color: var(--clr-primary);
+ }
+ 
+ /* Make images easier to work with */
+ img,
+ picture{
+   max-width: 100%;
+   display: block;
+ }
+ 
+ /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+ @media (prefers-reduced-motion: reduce) {
+   html:focus-within {
+    scroll-behavior: auto;
+   }
+   
+   *,
+   *::before,
+   *::after {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+   }
+ }
+ 
+ 
+ 
+ /* Utility Classes */
+ 
+ /* Defining the text color for the website. */
+ .text-primary{
+   color: var(--clr-primary);
+ }
+ .text-primary-100{
+   color: var(--clr-primary-100);
+ }
+ .text-secoundary{
+   color: var(--clr-secoundary);
+ }
+ .text-secoundary-100{
+   color: var(--clr-secoundary-100);
+ }
+ 
+ 
+ /* Defining the background color for the website. */
+ .bg-primary{
+   background-color: var(--clr-primary);
+ }
+ .bg-primary-100{
+   background-color: var(--clr-primary-100);
+ }
+ .bg-secoundary{
+   background-color: var(--clr-secoundary);
+ }
+ .bg-secoundary-100{
+   background-color: var(--clr-secoundary-100);
+ }
+ 
+ 
  /* Defining the font size for the website. */
-  --fs-xxlarger: 3rem; /* 48px*/
-  --fs-xlarger: 2rem; /* 32px*/
-  --fs-larger: 1.5rem; /* 24px*/
-  --fs-large: 1.25rem; /* 20px*/
-  --fs-regular: 1.125rem; /* 18px*/
-  --fs-medium: 1rem; /* 16px*/
-  --fs-small: 0.875rem; /* 14px*/
-  --fs-smaller: 0.75rem;  /* 12px*/
-
-  --fs-primary-heading:var(--fs-xxlarger);
-  --fs-secoundary-headig:var(--fs-xlarger);
-  --fs-nav:var(--fs-medium);
-  --fs-body:var(--fs-medium);
-  --fs-button:var(--fs-medium);
-
-/* Defining the font weight for the website. */
-  --fw-regular: 400;
-  --fw-bold: 700;
-
-
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-*{
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Making the height of the body and html 100% of the viewport. */
-html,
-body{
-  height: 100%;
-}
-
-/* Set core body defaults */
-body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: var(--clr-primary);
-}
-
-/* Make images easier to work with */
-img,
-picture{
-  max-width: 100%;
-  display: block;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
-
-/* Utility Classes */
-
-/* Defining the text color for the website. */
-.text-primary{
-  color: var(--clr-primary);
-}
-.text-primary-100{
-  color: var(--clr-primary-100);
-}
-.text-secoundary{
-  color: var(--clr-secoundary);
-}
-.text-secoundary-100{
-  color: var(--clr-secoundary-100);
-}
-
-
-/* Defining the background color for the website. */
-.bg-primary{
-  background-color: var(--clr-primary);
-}
-.bg-primary-100{
-  background-color: var(--clr-primary-100);
-}
-.bg-secoundary{
-  background-color: var(--clr-secoundary);
-}
-.bg-secoundary-100{
-  background-color: var(--clr-secoundary-100);
-}
-
-
-/* Defining the font size for the website. */
-
-.fs-xxlarger{
-  font-size: var(--fs-xxlarger);
-}
-.fs-xlarger{
-  font-size: var(--fs-xlarger);
-}
-.fs-larger{
-  font-size: var(--fs-larger);
-}
-.fs-large{
-  font-size: var(--fs-large);
-}
-.fs-regular{
-  font-size: var(--fs-regular);
-}
-.fs-medium{
-  font-size: var(--fs-medium);
-}
-.fs-small{
-  font-size: var(--fs-small);
-}
-.fs-smaller{
-  font-size: var(--fs-smaller);
-}
-
-/* Defining the font family for the website. */
-.ff-body{
-  font-family: var(--ff-body);
-}
-.ff-secoundary{
-  font-family: var(--ff-secoundary);
-}
-
-/* Defining the font weight for the website. */
-.fw-regular{
-  font-weight: var(--fw-regular);
-}
-.fw-bold{
-  font-weight: var(--fw-bold);
-}
-
-
-
-.container1{
-  --max-width: 1320px;
-  --padding: 1rem;
-
-  width: max(var(--max-width), 100% - var(--padding) *2);
-  margin-inline: auto;
-  background-color: antiquewhite;
-  height: 100vh;
-}
+ 
+ .fs-xxlarger{
+   font-size: var(--fs-xxlarger);
+ }
+ .fs-xlarger{
+   font-size: var(--fs-xlarger);
+ }
+ .fs-larger{
+   font-size: var(--fs-larger);
+ }
+ .fs-large{
+   font-size: var(--fs-large);
+ }
+ .fs-regular{
+   font-size: var(--fs-regular);
+ }
+ .fs-medium{
+   font-size: var(--fs-medium);
+ }
+ .fs-small{
+   font-size: var(--fs-small);
+ }
+ .fs-smaller{
+   font-size: var(--fs-smaller);
+ }
+ 
+ /* Defining the font family for the website. */
+ .ff-body{
+   font-family: var(--ff-body);
+ }
+ .ff-secoundary{
+   font-family: var(--ff-secoundary);
+ }
+ 
+ /* Defining the font weight for the website. */
+ .fw-regular{
+   font-weight: var(--fw-regular);
+ }
+ .fw-bold{
+   font-weight: var(--fw-bold);
+ }
+ 
+ 
+ .container{
+   --max-width: 1315px;
+   --padding: 1rem; 
+   width: min(var(--max-width), 100% - var(--padding) *2);
+   margin-inline: auto;
+   background-color: antiquewhite;
+   padding: 0 4rem 0rem 4rem;
+   margin-bottom: 6.25rem;
+ }
+ 
+ .even-column{
+   display: grid;
+   grid-gap: 5rem;
+ }
+ 
+ .even-row{
+   display: grid;
+ }
+ 
+ 
+ @media (max-width: 50rem) {
+   .container{
+     padding: 0 2rem 0 2rem;
+     margin-bottom: 4rem;
+   }
+ }
+ /* general Styling */
+ 
+ body{
+   font-family: var(--ff-primary);
+   font-weight: var(--fw-regular);
+   background-color: rgb(169, 197, 197);
+ }
+ 
+ 
+ .nav-wrapper{
+   display: flex;
+   justify-content: space-between;
+   padding-block: 0.567rem;
+   align-items: center;
+ }
+ 
+ .nav-logo{
+   max-width: 63px;
+   min-height: 57px
+ }
+ 
+ .primary-navigation{
+   display: flex;
+   gap: 2rem;
+ }
+ 
+ .nav-list{
+   display: flex;
+   gap: 2rem;
+   font-size: var(--fs-nav);
+ }
+ 
+ .mobile-nav-toggle{
+   display: none;
+ }
+ .icon-close{
+   display: none;
+ }
+ 
+ 
+ @media (max-width: 44.5rem){
+ 
+   .primary-navigation{
+     display: none;
+     position: absolute;
+     padding: 1rem;
+     inset: 5.1rem 1rem auto;
+     background-color: var(--clr-primary-100);
+     box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.25);
+     border-radius: 5px;
+     
+ 
+   }
+ 
+   .mobile-nav-toggle{
+     display: block;
+     border: none;
+     background-color: transparent;
+     width: 1.5rem;
+     aspect-ratio: 1;
+ 
+     background-image: url(./Image/icon-hamburger.svg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: center;
+ }
+ 
+ .mobile-nav-toggle[aria-expanded="true"]{
+     background-image: url(./Image/icon-close.svg);
+ }
+ 
+ 
+ 
+ .primary-navigation[data-visible]{
+     display: block;
+ }
+ 
+ .nav-list{
+     display: grid;
+     justify-content: center;
+     grid-gap: 2.5rem;
+ }
+ }
+ 
