@@ -18,15 +18,17 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="#"><img src="./Image/logo.png" alt="" class="nav-logo"></a>
-                <nav class="primary-navigation">
+                <button class="mobile-nav-toggle" aria-expanded="false">
+                </button>
+                <nav class="primary-navigation" id="primary-navigation">
                     <ul class="nav-list" role="list">
                         <li><a href="#">Home Page</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#"> Blogs</a></li>
                         <li><a href="#"> Projects</a></li>
                     </ul>
+                    <buttton class="button" style="display: none;">Start a Project</buttton>
                 </nav>
-                <buttton class="button">Start a Project</buttton>
             </div>
         </div>
     </header>
@@ -41,18 +43,18 @@
                 <div class="even-column">
                     <div>
                         <img src="./Image/Your Home.png" alt="#">
+                        <div>
+                            <p class="fs-regular text-primary" >Your home should feel like your home. 
+                                Express your family’s personality through the style of your home. 
+                                Allow it to comfort you and your family. Enjoy the memories made here in your home.
+                            </p>
+                            <button class="button">View Our Work</button>
+                            <button class="button">Services</button>
+                        </div>
                     </div>
                     <div>
-                        <p>Your home should feel like your home. 
-                            Express your family’s personality through the style of your home. 
-                            Allow it to comfort you and your family. Enjoy the memories made here in your home.
-                        </p>
-                        <button class="button">View Our Work</button>
-                        <button class="button">Services</button>
+                        <img src="./Image/hero-image.png" alt="" class="hero-image">
                     </div>
-                </div>
-                <div>
-                    <img src="./Image/hero-image.png" alt="" class="hero-image">
                 </div>
             </div>
         </section>
@@ -62,22 +64,22 @@
                 <div class="even-column">
                     <div>
                         <img src="./Image/Section Title1.png" alt="">
-                        <p>See how others are loving their home</p>
+                        <p class="fs-regular text-primary">See how others are loving their home</p>
                     </div>
                     <div>
                         <div class="testmonial-card">
-                            <p>"I could not ask for more. Michelle helped me with everything. 
+                            <p class="fs-regular text-primary">"I could not ask for more. Michelle helped me with everything. 
                                 This Lady is great, if you are thinking of building a home, this is the 
                                 company you need to work with. The pro's there have the professionalism and 
                                 knowledge you need, great job."
                             </p>
                             <div>
                                 <img src="" alt="">
-                                <span>Patricia Willeford</span>
+                                <span class="fs-meduim text-primary fw-bold">Patricia Willeford</span>
                             </div>
                         </div>
                         <div class="testmonial-card">
-                            <p>
+                            <p class="fs-regular text-primary">
                                 "Michelle and her team have 
                                 been awesome since the first time we walked
                                 into her office! She was able to take all of
@@ -89,18 +91,18 @@
                             </p>
                             <div>
                                 <img src="" alt="">
-                                <span>Ken Wells</span>
+                                <span class="fs-meduim text-primary fw-bold">Ken Wells</span>
                             </div>
                         </div>
                         <div class="testmonial-card">
-                            <p>"I could not ask for more. Michelle helped me with everything. 
+                            <p class="fs-regular text-primary">"I could not ask for more. Michelle helped me with everything. 
                                 This Lady is great, if you are thinking of building a home, this is the 
                                 company you need to work with. The pro's there have the professionalism and 
                                 knowledge you need, great job."
                             </p>
                             <div>
                                 <img src="" alt="">
-                                <span>Oliva Petrikan</span>
+                                <span class="fs-meduim text-primary fw-bold">Oliva Petrikan</span>
                             </div>
                         </div>
                     </div>
@@ -116,16 +118,16 @@
                         <div>
                             <div class="card">
                                 <img src="./Image/icon1.png" alt="">
-                                <h3>Construction Planning</h3>
-                                <p>Design and drafting of your home. 
+                                <h3 class="fs-larger text-primary fs-bold">Construction Planning</h3>
+                                <p class="fs-medium text-primary">Design and drafting of your home. 
                                     A great design needs to be thought all
                                     the way through from preconstruction to getting the keys.
                                 </p>
                             </div>
                             <div class="card">
                                 <img src="./Image/icon2.png" alt="">
-                                <h3>Interior Selections</h3>
-                                <p>We help you choose 
+                                <h3 class="fs-larger text-primary fs-bold">Interior Selections</h3>
+                                <p class="fs-medium text-primary">We help you choose 
                                     your fixtures, appliances selections 
                                     and paint colors. Great for a refresh, 
                                     new build, or remodel.
@@ -133,16 +135,16 @@
                             </div>
                             <div class="card">
                                 <img src="./Image/icon3.png" alt="">
-                                <h3>Furniture Selections</h3>
-                                <p>We can help bring your style out even when moving 
+                                <h3 class="fs-larger text-primary fs-bold">Furniture Selections</h3>
+                                <p class="fs-medium text-primary">We can help bring your style out even when moving 
                                     into an empty space or staging a house for presentations.
 
                                 </p>
                             </div>
                             <div class="card">
                                 <img src="./Image/logo4.png" alt="">
-                                <h3>Commercial Interior Design</h3>
-                                <p>Design and drafting of your home. 
+                                <h3 class="fs-larger text-primary fs-bold">Commercial Interior Design</h3>
+                                <p class="fs-medium text-primary">Design and drafting of your home. 
                                     A great design needs to be thought all
                                     the way through from preconstruction to getting the keys.
                                 </p>
@@ -170,7 +172,7 @@
                         <div class="porject-card">
                            <figcaption>
                             <img src="./Image/Image11.png" alt="">
-                             <h2>2019 Parade of Homes Showcase Home</h2>
+                             <h2 class="fs-xlarger text-primary">2019 Parade of Homes Showcase Home</h2>
                            </figcaption>
                         </div>
                         <div class="porject-card">
@@ -193,17 +195,17 @@
                     <div>
                         <b>Blog</b>
                         <img src="./Image/Style Your Home.png" alt="">
-                        <p>A fan of doing DIY? Learn how to style your home practically on your own.</p>
+                        <p class="fs-regular text-primary">A fan of doing DIY? Learn how to style your home practically on your own.</p>
                     </div>
                     <div>
                         <div class="blog-card">
                             <img src="./Image/card1.png" alt="">
                             <span>
-                                <b>Catagories</b>
-                                <time> 5 min read</time>
+                                <b class="fs-small text-primary">Catagories</b>
+                                <time  class="fs-small text-primary"> 5 min read</time>
                             </span>
-                            <h3>Blog title heading will go here</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur 
+                            <h3 class="fs-larger text-primary fs-bold">Blog title heading will go here</h3>
+                            <p class="fs-medium text-primary">Lorem ipsum dolor sit amet, consectetur 
                                 adipiscing elit. Suspendisse varius enim in eros.
                             </p>
                             <button>Read more ></button>
@@ -211,11 +213,11 @@
                         <div class="blog-card">
                             <img src="./Image/card2.png" alt="">
                             <span>
-                                <b>Catagories</b>
-                                <time> 5 min read</time>
+                                <b class="fs-small text-primary">Catagories</b>
+                                <time  class="fs-small text-primary"> 5 min read</time>
                             </span>
-                            <h3>Blog title heading will go here</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur 
+                            <h3 class="fs-larger text-primary fs-bold">Blog title heading will go here</h3>
+                            <p class="fs-medium text-primary">Lorem ipsum dolor sit amet, consectetur 
                                 adipiscing elit. Suspendisse varius enim in eros.
                             </p>
                             <button>Read more ></button>
@@ -223,11 +225,11 @@
                         <div class="blog-card">
                             <img src="./Image/card3.png" alt="">
                             <span>
-                                <b>Catagories</b>
-                                <time> 5 min read</time>
+                                <b class="fs-small text-primary">Catagories</b>
+                                <time  class="fs-small text-primary"> 5 min read</time>
                             </span>
-                            <h3>Blog title heading will go here</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur 
+                            <h3 class="fs-larger text-primary fs-bold">Blog title heading will go here</h3>
+                            <p class="fs-medium text-primary">Lorem ipsum dolor sit amet, consectetur 
                                 adipiscing elit. Suspendisse varius enim in eros.
                             </p>
                             <button>Read more ></button>
@@ -245,64 +247,64 @@
                 <div class="even-row">
                     <div>
                         <img src="./Image/contactUs.png" alt="">
-                        <p>Make your home feel like home</p>
+                        <p class="fs-regular text-primary">Make your home feel like home</p>
                          <ul role="list">
                             <li>
                                 <img src="./Image/icon-email.png" alt="">
-                                <span>hello@257interiors.com</span>
+                                <span class="text-medium text-primary">hello@257interiors.com</span>
                             </li>
                             <li>
                                 <img src="./Image/icon-phone.png" alt="">
-                                <span>+1 (555) 000-0000</span>
+                                <span  class="text-medium text-primary">+1 (555) 000-0000</span>
                             </li>
                             <li>
                                 <img src="./Image/icon-map.png" alt="">
-                                <span>4646 Corna Suite 257, Corpus Christi, TX 78411</span>
+                                <span  class="text-medium text-primary">4646 Corna Suite 257, Corpus Christi, TX 78411</span>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <form action="" class="contact-form">
                             <label for="Name">
-                                <small>First Name</small>
+                                <small class="fs-regular text-primary">First Name</small>
                                 <input type="text">
                             </label>
                             
                             <label for="Surname">
-                                <small>Last Name</small>
+                                <small class="fs-regular text-primary">Last Name</small>
                                 <input type="text">
                             </label>
                             
                             <label for="Email">
-                                <small>Email</small>
+                                <small class="fs-regular text-primary">Email</small>
                                 <input type="Email">
                             </label>
 
                             <label for="phone">
-                                <small>Phone Number</small>
+                                <small class="fs-regular text-primary">Phone Number</small>
                                 <input type="number">
                             </label>
 
                             <label for="option">
-                                <small>Choose a services</small>
+                                <small class="fs-regular text-primary">Choose a services</small>
                                 <select name="" id="">
                                     <option value="select-one">select one--</option>
                                 </select>
                             </label>
                             <label for="describe">
-                                <small> Which best describes you?</small>
+                                <small class="fs-regular text-primary"> Which best describes you?</small>
                                 <input type="radio">
-                                <label for=""> Fun/Colorful</label>
+                                <label for="" class="fs-small text-primary"> Fun/Colorful</label>
                                 <input type="radio">
-                                <label for=""> Family Farmhouse</label>
+                                <label for="" class="fs-small text-primary"> Family Farmhouse</label>
                                 <input type="radio">
-                                <label for=""> Simple /Elegant</label>
+                                <label for="" class="fs-small text-primary"> Simple /Elegant</label>
                                 <input type="radio">
-                                <label for=""> Traditional Style Home</label>
+                                <label for="" class="fs-small text-primary"> Traditional Style Home</label>
                                 <input type="radio">
-                                <label for=""> Morden Contempary</label>
+                                <label for="" class="fs-small text-primary"> Morden Contempary</label>
                                 <input type="radio">
-                                <label for=""> Midcentury Mordern</label>
+                                <label for="" class="fs-small text-primary"> Midcentury Mordern</label>
                             </label>
 
                             <label for="message">
@@ -348,13 +350,18 @@
         </section>
 
         <section>
-             <ul role="list">
+            <div class="container">
+                 <ul role="list">
                 <li><a href="">2022 257 Interiors LLC. All right reserved.</a></li>
                 <li><a href="">Privacy Policy</a></li>
                 <li><a href="">Terms of Service</a></li>
                 <li><a href="">Cookies Settings</a></li>
             </ul>
+            </div>
+            
         </section>
     </footer>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
