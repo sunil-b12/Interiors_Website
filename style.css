@@ -96,6 +96,11 @@
    display: block;
  }
  
+ hr{
+  height: 0;
+  border: 1px solid var(--clr-primary);
+  background-color: var(--clr-primary);
+ }
  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
  @media (prefers-reduced-motion: reduce) {
    html:focus-within {
@@ -181,6 +186,7 @@
    font-family: var(--ff-secoundary);
  }
  
+
  /* Defining the font weight for the website. */
  .fw-regular{
    font-weight: var(--fw-regular);
@@ -203,29 +209,40 @@
    --padding: 1rem; 
    width: min(var(--max-width), 100% - var(--padding) *2);
    margin-inline: auto;
-   margin-bottom: 6.25rem;
+   margin-bottom: 4rem;
    background-color: antiquewhite;
  }
  
  .even-column{
    display: grid;
-   grid-gap: 5rem;
+   grid-gap: 2.5rem;
  }
  
  .even-row{
    display: grid;
+   gap: 2.5rem;
+   padding-block: 3rem;
+
+
  }
  
  
- @media (max-width: 50rem) {
-
+ @media (min-width: 65rem) {
    .container{
-     margin-bottom: 4rem;
+     margin-bottom: 6.25rem;
    }
    .even-column{
-    gap: 2.5rem;
+    gap: 5rem;
    }
+
+   .even-row{
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 5rem;
+    padding-block: 7rem;
+   }
+ 
  }
+
  /* general Styling */
  
  body{
@@ -235,11 +252,14 @@
    background-color: rgb(59, 59, 143);
  }
 
+
+
  /* button */
+
 button{
   font-size: var(--fs-button);
 }
- .start-porject{
+ .start-porject-btn{
     width: 153px;
     padding: 8px 20px 8px 20px;
     color: var(--clr-primary-100);
@@ -247,7 +267,7 @@ button{
     border: none;
  }
 
- .view-work{
+ .view-work-btn{
     max-width: 165px;
     padding: 8px 20px 8px 20px;
     color: var(--clr-primary-100);
@@ -257,13 +277,46 @@ button{
 
  }
 
- .services{
+ .services-btn{
     max-width: 120px;
     padding: 8px 20px 8px 20px;
     color: var(--clr-primary);
     background-color: var(--clr-primary-100);
     border: 1px solid #000000;
  }
+
+ .work-btn{
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--clr-secoundary);
+  margin-right: 1.5rem;
+ }
+
+.porject-btn{
+  background-color: transparent;
+  border: none;
+}
+
+
+@media (max-width: 22rem){
+  
+
+.view-work-btn{
+  max-width: 125px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.services-btn{
+  max-width: 125px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.work-btn{
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  margin-right: 0.75rem;
+}
+}
+
 
  /* Navigation */
  
@@ -369,7 +422,7 @@ button{
   padding-bottom: 2.5rem;
  }
 
- .even-column,
+
  .bay{
   position: relative;
  }
@@ -415,6 +468,7 @@ button{
   display: grid;
   gap: 1.5rem;
   justify-items: center;
+  padding-top: 7rem;
  }
 
 
@@ -438,10 +492,62 @@ button{
  }
 
  @media (max-width: 25rem) {
+  
+  .testimonial-title{
+    padding-top: 2.5rem;
+   }
+  
   .testimonial-cards{
    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+   padding: 0;
   }
   .testimonial-cards > *{
     padding: 1rem;
    }
  }
+
+
+ 
+/* Our Work Section */
+
+.our-work{
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+}
+
+.work-cards{
+  display: grid;
+  gap: 0.75rem;
+}
+.card{
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+}
+
+.card>*{
+  padding-bottom: 1rem
+}
+
+
+
+@media (max-width: 65rem) {
+  .work-image{
+    width: 100%;
+  }
+
+}
+@media (min-width: 31rem) {
+  .work-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .work-cards> :nth-child(2){
+    border-left: 1px solid var(--clr-primary);
+  }
+  
+  .works-button{
+    margin-top: 2.25rem;
+  }
+}
