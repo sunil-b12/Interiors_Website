@@ -259,7 +259,7 @@
 button{
   font-size: var(--fs-button);
 }
- .start-porject-btn{
+ .start-project-btn{
     width: 153px;
     padding: 8px 20px 8px 20px;
     color: var(--clr-primary-100);
@@ -292,7 +292,7 @@ button{
   margin-right: 1.5rem;
  }
 
-.porject-btn{
+.project-btn{
   background-color: transparent;
   border: none;
 }
@@ -393,7 +393,7 @@ button{
      justify-content: center;
      grid-gap: 2.5rem;
  }
- .start-porject{
+ .start-project{
    display: none;
  }
  }
@@ -474,9 +474,9 @@ button{
 
  .testimonial-cards{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
    gap: 2rem;
-   padding-bottom: 5.6rem;
+   padding: 0;
  }
 
  .testimonial-cards > *{
@@ -491,24 +491,24 @@ button{
   margin-top: 2rem;
  }
 
- @media (max-width: 25rem) {
+ @media (min-width: 25rem) {
   
   .testimonial-title{
     padding-top: 2.5rem;
    }
   
   .testimonial-cards{
-   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-   padding: 0;
+   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+   padding-bottom: 5.6rem;
+
   }
   .testimonial-cards > *{
     padding: 1rem;
    }
  }
 
-
- 
 /* Our Work Section */
+
 
 .our-work{
   display: grid;
@@ -550,4 +550,74 @@ button{
   .works-button{
     margin-top: 2.25rem;
   }
+}
+
+/* Our Project Section */
+
+.project-cards{
+  display: grid;
+  padding-bottom: 3rem;
+  gap: 2rem;
+}
+
+.project-heading{
+  display: flex;
+ justify-content: center;
+ padding-block: 1rem;
+ border-bottom: 2px solid var(--clr-primary);
+}
+
+figcaption{
+  display: flex;
+  position: relative;
+}
+
+figcaption > :nth-child(2){
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(251, 228, 215, 0.9);
+  text-align: center;
+  padding: 3.4rem 4.6rem 3.4rem 4.6rem;  
+}
+
+.project-cards > * img{
+  width: 100%;
+}
+
+
+@media (min-width: 50rem) {
+
+  .project-heading{
+   padding-block: 5rem;
+  }
+  .project-cards{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "img1 img2"
+    "img1 img4"
+    "img3 img4";
+     padding-bottom: 7rem;
+  }
+  
+  figcaption > :nth-child(2){
+   font-size: var(--fs-xlarger);
+  }
+
+  .project-card1 { grid-area: img1; }
+  .project-card2 { grid-area:img2; }
+  .project-card3 { grid-area:img3; }
+  .project-card4 { grid-area: img4; }
+
+}
+
+
+@media (max-width: 31rem) {
+  
+  figcaption > :nth-child(2){
+   font-size: var(--fs-medium);
+  padding: 2.4rem 2.6rem 2.4rem 2.6rem;  
+
+  }
+
 }
