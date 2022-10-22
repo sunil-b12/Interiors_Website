@@ -101,6 +101,7 @@
   border: 1px solid var(--clr-primary);
   background-color: var(--clr-primary);
  }
+
  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
  @media (prefers-reduced-motion: reduce) {
    html:focus-within {
@@ -115,84 +116,6 @@
      transition-duration: 0.01ms !important;
      scroll-behavior: auto !important;
    }
- }
- 
- 
- 
- /* Utility Classes */
- 
- /* Defining the text color for the website. */
- .text-primary{
-   color: var(--clr-primary);
- }
- .text-primary-100{
-   color: var(--clr-primary-100);
- }
- .text-secoundary{
-   color: var(--clr-secoundary);
- }
- .text-secoundary-100{
-   color: var(--clr-secoundary-100);
- }
- 
- 
- /* Defining the background color for the website. */
- .bg-primary{
-   background-color: var(--clr-primary);
- }
- .bg-primary-100{
-   background-color: var(--clr-primary-100);
- }
- .bg-secoundary{
-   background-color: var(--clr-secoundary);
- }
- .bg-secoundary-100{
-   background-color: var(--clr-secoundary-100);
- }
- 
- 
- /* Defining the font size for the website. */
- 
- .fs-xxlarger{
-   font-size: var(--fs-xxlarger);
- }
- .fs-xlarger{
-   font-size: var(--fs-xlarger);
- }
- .fs-larger{
-   font-size: var(--fs-larger);
- }
- .fs-large{
-   font-size: var(--fs-large);
- }
- .fs-regular{
-   font-size: var(--fs-regular);
- }
- .fs-medium{
-   font-size: var(--fs-medium);
- }
- .fs-small{
-   font-size: var(--fs-small);
- }
- .fs-smaller{
-   font-size: var(--fs-smaller);
- }
- 
- /* Defining the font family for the website. */
- .ff-body{
-   font-family: var(--ff-body);
- }
- .ff-secoundary{
-   font-family: var(--ff-secoundary);
- }
- 
-
- /* Defining the font weight for the website. */
- .fw-regular{
-   font-weight: var(--fw-regular);
- }
- .fw-bold{
-   font-weight: var(--fw-bold);
  }
  
 
@@ -297,6 +220,19 @@ button{
   border: none;
 }
 
+.read-more-btn{
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  margin-top: 2rem;
+}
+
+
+.view-all-btn{
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--clr-secoundary);
+}
 
 @media (max-width: 22rem){
   
@@ -620,4 +556,147 @@ figcaption > :nth-child(2){
 
   }
 
+}
+
+/* Blogs Section */
+
+.blog-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 7rem;
+}
+
+
+.blog-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+
+.blog-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-info{
+  padding: 1.5rem;
+  border: 1px solid var(--clr-primary);
+}
+.blog-info >:nth-child(1){
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blog-info >:nth-child(2){
+  margin-bottom: 0.5rem;
+}
+
+.view-button{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7rem;
+}
+
+
+@media (max-width: 50rem) {
+  .blog-heading{
+    padding-top: 2.5rem;
+  }
+  
+  .view-button{
+    padding-bottom: 2.5rem;
+  }
+  
+}
+
+/* Contact Us Section */
+
+
+ 
+ /* Utility Classes */
+ 
+ /* Defining the text color for the website. */
+ .text-primary{
+  color: var(--clr-primary);
+}
+.text-primary-100{
+  color: var(--clr-primary-100);
+}
+.text-secoundary{
+  color: var(--clr-secoundary);
+}
+.text-secoundary-100{
+  color: var(--clr-secoundary-100);
+}
+
+
+/* Defining the background color for the website. */
+.bg-primary{
+  background-color: var(--clr-primary);
+}
+.bg-primary-100{
+  background-color: var(--clr-primary-100);
+}
+.bg-secoundary{
+  background-color: var(--clr-secoundary);
+}
+.bg-secoundary-100{
+  background-color: var(--clr-secoundary-100);
+}
+
+
+/* Defining the font size for the website. */
+
+.fs-xxlarger{
+  font-size: var(--fs-xxlarger);
+}
+.fs-xlarger{
+  font-size: var(--fs-xlarger);
+}
+.fs-larger{
+  font-size: var(--fs-larger);
+}
+.fs-large{
+  font-size: var(--fs-large);
+}
+.fs-regular{
+  font-size: var(--fs-regular);
+}
+.fs-medium{
+  font-size: var(--fs-medium);
+}
+.fs-small{
+  font-size: var(--fs-small);
+}
+.fs-smaller{
+  font-size: var(--fs-smaller);
+}
+
+/* Defining the font family for the website. */
+.ff-body{
+  font-family: var(--ff-body);
+}
+.ff-secoundary{
+  font-family: var(--ff-secoundary);
+}
+
+
+/* Defining the font weight for the website. */
+.fw-regular{
+  font-weight: var(--fw-regular);
+}
+.fw-bold{
+  font-weight: var(--fw-bold);
+}
+
+.flex{
+  display: flex;
+}
+.grid{
+  display: grid;
+  gap: 0.875rem;
 }
