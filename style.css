@@ -4,6 +4,7 @@
   /* Defining the colors for the website. */
    --clr-primary: #000000;
    --clr-primary-100: #ffffff;
+   --clr-primary-200: #F4F4F4;
  
    --clr-secoundary: #00543f;
    --clr-secoundary-100: #505050;
@@ -16,12 +17,12 @@
    --ff-hero-heading:var(--ff-secoundary);
  
   /* Defining the font size for the website. */
-   --fs-xxlarger: 3rem; /* 48px*/
-   --fs-xlarger: 2rem; /* 32px*/
-   --fs-larger: 1.5rem; /* 24px*/
-   --fs-large: 1.25rem; /* 20px*/
-   --fs-regular: 1.125rem; /* 18px*/
-   --fs-medium: 1rem; /* 16px*/
+   --fs-xxlarger: clamp(1.5rem, 12vw, 3rem); /* 48px*/
+   --fs-xlarger: clamp(1.5rem, 5vw, 2rem);; /* 32px*/
+   --fs-larger: clamp(1.25rem, 5vw, 1.5rem); /* 24px*/
+   --fs-large: clamp(1rem, 5vw, 1.25rem); /* 20px*/
+   --fs-regular:clamp(0.875rem, 5vw, 1.25rem); /* 18px*/
+   --fs-medium: clamp(0.75rem, 4vw, 1rem);; /* 16px*/
    --fs-small: 0.875rem; /* 14px*/
    --fs-smaller: 0.75rem;  /* 12px*/
  
@@ -33,7 +34,9 @@
  
  /* Defining the font weight for the website. */
    --fw-regular: 400;
+   --fw-medium: 600;
    --fw-bold: 700;
+
  
  }
 
@@ -84,9 +87,10 @@
  }
  
  /* A elements that don't have a class get default styles */
- a:not([class]) {
+ a {
    text-decoration: auto;
    color: var(--clr-primary);
+   cursor: pointer;
  }
  
  /* Make images easier to work with */
@@ -134,7 +138,7 @@
   --padding: 1rem; 
   width: min(var(--max-width), 100% - var(--padding) *2);
   margin-inline: auto;
-  margin-bottom: 3.25rem;
+  margin-bottom: 1.25rem;
   background-color: var(--clr-primary-100);
 }
 
@@ -142,7 +146,7 @@
 .even-column{
   display: grid;
   gap: 2.5rem;
-  padding-block: 3.5rem;
+  padding-block: 1.5rem;
   
 }
 
@@ -150,24 +154,24 @@
 .even-rows{
   display: grid;
   gap: 2.5rem;
-  padding-block: 3.5rem;
+  padding-block: 1.5rem;
 }
 
 
 @media (min-width:50rem) {
  .container{
-  margin-bottom: 6.25rem;
+  margin-bottom: 5.25rem;
 }
   .even-column{
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
-    padding-block: 7rem;
+    padding-block: 5rem;
   }
 
   .even-rows{
     display: grid;
     gap: 5rem;
-    padding-block: 7rem;
+    padding-block: 5rem;
   }
   
 }
@@ -192,7 +196,8 @@
  }
   .start-project-btn{
      width: 153px;
-     padding: 8px 20px 8px 20px;
+     text-align: center;
+     padding-block: 0.5rem;
      color: var(--clr-primary-100);
      background-color: var(--clr-secoundary);
      border: none;
@@ -200,7 +205,9 @@
  
   .view-work-btn{
      max-width: 165px;
-     padding: 8px 20px 8px 20px;
+     width: 100%;
+     text-align: center;
+     padding-block: 0.5rem;
      color: var(--clr-primary-100);
      background-color: var(--clr-secoundary);
      border: none;
@@ -210,14 +217,16 @@
  
   .services-btn{
      max-width: 120px;
-     padding: 8px 20px 8px 20px;
+     width: 100%;
+     text-align: center;
+     padding-block: 0.5rem;
      color: var(--clr-primary);
      background-color: var(--clr-primary-100);
      border: 1px solid #000000;
   }
  
   .work-btn{
-   padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+   padding: 0.75rem 1.5rem;
    background-color: transparent;
    border: 1px solid var(--clr-secoundary);
    margin-right: 1.5rem;
@@ -237,14 +246,17 @@
  
  
  .view-all-btn{
-   padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
    background-color: transparent;
    border: 1px solid var(--clr-secoundary);
  }
  
  .submit-btn{
    max-width: 115px;
-   padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+   width: 100%;
+   text-align: center;
+   padding-block: 0.75rem;
    background-color: var(--clr-secoundary);
    color: var(--clr-primary-100);
  }
@@ -253,16 +265,16 @@
  @media (max-width: 22rem){
   .view-work-btn{
   max-width: 125px;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .services-btn{
   max-width: 125px;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .work-btn{
-  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   margin-right: 0.75rem;
 }
 }
@@ -364,15 +376,15 @@
    }
 
    
-   .bay{
+   .hero{
     position: relative;
    }
    
-   .bay::after{
+   .hero::after{
      content: '';
       display: block;
       position: absolute;
-      right: -13%;
+      right: -2%;
       bottom: -40%;
       width: 450px;
       height: 250px;
@@ -397,7 +409,7 @@
 
 @media (max-width:40rem) {
 
-   .bay::after{
+   .hero::after{
      content: '';
       display: none;
    }
@@ -487,7 +499,7 @@
   
   /* Our Project Section */
   
-  .project-cards{
+  .image-grid{
     display: grid;
     gap: 2rem;
   }
@@ -513,14 +525,14 @@
     padding: 3.4rem 4.6rem 3.4rem 4.6rem;  
   }
   
-  .project-cards > * img{
+  .image-grid > * img{
     width: 100%;
   }
   
   
   @media (min-width: 50rem) {
   
-    .project-cards{
+    .image-grid{
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
       "img1 img2"
@@ -532,10 +544,10 @@
      font-size: var(--fs-xlarger);
     }
   
-    .project-card1 { grid-area: img1; }
-    .project-card2 { grid-area:img2; }
-    .project-card3 { grid-area:img3; }
-    .project-card4 { grid-area: img4; }
+    .img-grid-1 { grid-area: img1; }
+    .img-grid-2 { grid-area:img2; }
+    .img-grid-3 { grid-area:img3; }
+    .img-grid-4 { grid-area: img4; }
   
   }
   
@@ -646,7 +658,7 @@
   }
   
   input{
-    max-width: 300px;
+    max-width: 386px;
     width: 100%;
     padding: 0.75rem;
   
@@ -666,7 +678,7 @@
   
   .radio-btn > :nth-child(2){
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
     padding-top: 1.5rem;
   }
   .radio-left> *{
@@ -686,6 +698,14 @@
     gap: 0.5rem;
   }
    
+
+  @media (max-width: 50rem) {
+    .contact-heading{
+      display: grid;
+      justify-items: center;
+    }
+    
+  }
   
 /* footer */
 
@@ -797,6 +817,9 @@ align-items: center;
   .bg-primary-100{
     background-color: var(--clr-primary-100);
   }
+  .bg-primary-200{
+    background-color: var(--clr-primary-200);
+  }
   .bg-secoundary{
     background-color: var(--clr-secoundary);
   }
@@ -849,3 +872,10 @@ align-items: center;
     font-weight: var(--fw-bold);
   }
   
+  .fw-medium{
+    font-weight: var(--fw-medium);
+  }
+
+  .grid{
+    display: grid;
+  }

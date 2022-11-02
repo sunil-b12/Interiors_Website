@@ -1,0 +1,229 @@
+.blog-header{
+    display: grid;
+    gap: 1.5rem;
+}
+.blog-header> :nth-child(1){
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.blog-header> :nth-child(3){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: 2rem;
+}
+
+.blog-header> :nth-child(4){
+    padding-top: 2rem;
+ }
+
+.blog-social-links{
+    display: flex;
+    gap: 0.5rem;
+}
+.blog-social-links > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #f4f4f4;
+    box-shadow: -2px 6px 6px rgba(0, 0, 0, 0.15)
+}
+
+@media (min-width: 40rem) {
+    .blog-header> :nth-child(4){
+        padding-top: 3rem;
+     }
+     
+    .blog-social-links{
+        align-items: center;
+        justify-items: center;
+        justify-content: flex-end;
+
+    }
+    
+}
+
+.blog-post{
+    --max-width: 768px;
+    width: min(100%, var(--max-width));
+    margin-inline: auto;
+    padding-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+.blog-post > :nth-child(1){
+    display: grid;
+    gap: 1.5rem;
+}
+
+.blog-post > :nth-child(2){
+    display: grid;
+    gap: 1.5rem;
+}
+
+figure{
+    display: grid;
+    gap: 1rem;
+    padding-block: 2.5rem;
+}
+
+figure>:nth-child(2){
+    border-left: 2px solid #000000;
+    padding-left: 0.5rem;
+
+}
+
+
+blockquote{
+    padding-block: 2rem;
+    font-style: italic;
+}
+blockquote >:nth-child(1){
+    border-left: 2px solid #000000;
+    padding-left: 1.5rem;
+
+
+}
+
+.share-post{
+    display: grid;
+    gap: 1rem;
+}
+
+.share-post > :nth-child(2){
+    display: grid;
+    gap: 2rem;
+}
+.share-post > :nth-child(2){
+ padding-bottom: 2.5rem;
+ border-bottom: 2px solid #000000;
+}
+
+.share-post > :nth-child(3){
+    display: flex;
+    gap: 1rem;
+    padding-top: 2.5rem;
+}
+
+
+.post-socail-link {
+    display: flex;
+    gap: 0.5rem;   
+}
+
+.post-socail-link > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #f4f4f4;
+    box-shadow: -2px 6px 6px rgba(0, 0, 0, 0.15)
+
+
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;   
+}
+.post-tags > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80px;
+    min-height: 29px;
+    width: 100%;
+    padding: 4px 8px;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    background-color: #f4f4f4;
+    box-shadow: -2px 6px 6px rgba(0, 0, 0, 0.15)
+}
+
+@media (min-width: 45rem) {
+    
+.blog-post{
+    padding-top: 4rem;
+   
+}
+    .share-post > :nth-child(2){
+        grid-template-columns: repeat(2 ,1fr);
+    }
+    
+}
+
+
+.cta{
+    display: grid;
+    gap: 2.5rem;
+    background-image: url(../Image/background-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 1rem;
+}
+.cta >:nth-child(2){
+    display: grid;
+    gap: 1rem;
+}
+.email-signup{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+.input-email{
+    max-width: 385px;
+    height: 45px;
+    padding: 0.75rem;
+    border: 1px solid #000000;
+    color: #505050;
+}
+
+.sign-up-btn {
+    background: #000000;
+    color: #fff;
+    display:inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-overflow: ellipsis;
+    transition: 0.2s box-shadow ease-in-out, 0.2s background-color ease-in-out;
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+}
+    .sign-up-btn:hover {
+      background: darken(#0077B5, 5%);
+      box-shadow: inset 0 0 6px #333;
+    }
+  
+.terms-condition{
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+@media (min-width: 60rem) {
+    .cta{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 7rem 5rem;
+    }
+}
+
+@media (max-width: 35rem) {
+    .input-email{
+        max-width: 300px;
+    }
+    .sign-up-btn {
+        padding: 0.5rem 0.75rem;
+    }
+}
